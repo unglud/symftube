@@ -32,4 +32,36 @@ class FrontController extends AbstractController
             'controller_name' => 'FrontController',
         ]);
     }
+
+    #[Route('/search-results', name: 'search_results', methods: ['POST'])]
+    public function searchResults(): Response
+    {
+        return $this->render('front/search_results.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    #[Route('/pricing', name: 'pricing')]
+    public function pricing(): Response
+    {
+        return $this->render('front/pricing.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    #[Route('/register', name: 'register')]
+    public function register(): Response
+    {
+        return $this->render('front/register.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    #[Route('/login', name: 'login')]
+    public function login(): Response
+    {
+        return $this->render('front/login.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
 }
