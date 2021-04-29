@@ -16,4 +16,20 @@ class FrontController extends AbstractController
             'controller_name' => 'FrontController',
         ]);
     }
+
+    #[Route('/video-list', name: 'video_list')]
+    public function videoList(): Response
+    {
+        return $this->render('front/video_list.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    #[Route('/video-details', name: 'video_details')]
+    public function videoDetails(): Response
+    {
+        return $this->render('front/video_details.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
 }
